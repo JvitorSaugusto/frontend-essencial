@@ -1,0 +1,181 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    cursor: url(icons8-dinosaur-50.png), auto;
+}
+
+body{
+    font-family: "Press Start 2P", system-ui;
+    font-style: normal;
+    background-image: url(R.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.container{
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 500px;
+    width: 100%;
+
+    /* Reflexao */
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+header{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.header h1{
+    color: #333;
+    font: 2.2 em;
+    margin-bottom: 10px;
+}
+
+.header p{
+    color: #ffffff;
+    background-color: #7a1010;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 4 20 40 rgba(0, 0, 0, 0.1);
+    font-size: 1.1em;
+}
+
+.form-control {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.form-control label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+    font-weight: 500;
+    font-size: 0.95em;
+}
+
+.form-control label i {
+    color: #7a1010;
+    margin-right: 8px;
+}
+
+.form-control input,
+.form-control textarea {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    border: 2px solid #f0f0f0;
+    border-radius: 10px;
+    font-size: 1em;
+    transition: all 0.3s ease;
+}
+
+.form-control input:focus,
+.form-control textarea:focus {
+    outline: none;
+    border: #79d411;
+    box-shadow: 0 0 0 3px rgba(102, 126, );
+}
+
+.form-control.success input,
+.form-control.sucess textarea {
+    border-color: #4caf50;
+    background-color: #f8fff8;
+}
+
+.form-control.error input,
+.form-control.error textarea{
+    border-color: #f44336;
+    background-color: #fff8f8;
+
+}
+
+.form-control small {
+    visibility: hidden;
+    position: absolute;
+    bottom: -25px;
+    left: 0;
+    color: #f44336;
+    font-size: 0.85em;
+}
+
+.form-control.error small {
+    visibility: visible;
+}
+
+.form-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #7a1010;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.form-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+    background-image: url(b72134112b54864e4948865375ecbb11.gif);
+    background-position: center -20px;
+    background-size: 220px;
+}
+
+.form-button:active {
+    transform: translateY(0);
+}
+
+.successMessage {
+    display: none;
+    background-color: #d4edda;
+    color: #155724;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #c3e6cb;
+}
+
+.successMessage.show {
+    display: block;
+    animation: slideIn 0.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@media (max-widht: 600px){
+    .container {
+        padding: 30px 20px;
+        margin: 10px
+    }
+
+    .header h1 {
+        font-size: 1.8em;
+    }
+}
